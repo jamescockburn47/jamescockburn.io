@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="James Cockburn is a UK solicitor who builds legal AI tools. Learn vibe coding, local RAG, and self-hosted AI workflows for lawyers.">
+    <link rel="canonical" href="https://jamescockburn.io" />
+    <title>James Cockburn | Vibe Coding & Local AI for UK Lawyers</title>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="James Cockburn | Vibe Coding & Local AI for UK Lawyers">
+    <meta property="og:description" content="UK solicitor who builds legal AI tools. Teaching lawyers to build rather than buy.">
+    <meta property="og:url" content="https://jamescockburn.io">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="James Cockburn | Vibe Coding & Local AI for UK Lawyers">
+    <meta name="twitter:description" content="UK solicitor who builds legal AI tools. Teaching lawyers to build rather than buy.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "James Cockburn",
+        "jobTitle": "Solicitor",
+        "nationality": "UK",
+        "knowsAbout": [
+            "Vibe Coding",
+            "AI-Assisted Development",
+            "Local AI Models", 
+            "Retrieval-Augmented Generation (RAG)", 
+            "Legal Technology", 
+            "Self-Hosted AI",
+            "Competition Law",
+            "Civil Fraud Litigation",
+            "Cursor IDE",
+            "Prompt Engineering",
+            "Context Engineering",
+            "Hallucination Detection"
+        ],
+        "url": "https://jamescockburn.io",
+        "sameAs": [
+            "https://www.linkedin.com/in/james-cockburn/"
+        ],
+        "description": "UK solicitor who builds legal AI tools using vibe coding and local models. Teaching lawyers to build rather than buy."
+      }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --navy: #0a192f;
+            --light-navy: #112240;
+            --lightest-navy: #233554;
+            --slate: #8892b0;
+            --light-slate: #a8b2d1;
+            --lightest-slate: #ccd6f6;
+            --white: #e6f1ff;
+            --gold: #d97706;
+            --gold-dim: rgba(217, 119, 6, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--navy);
+            color: var(--slate);
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            background-image: 
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(217, 119, 6, 0.08), transparent),
+                radial-gradient(circle at 20% 80%, rgba(17, 34, 64, 0.8), transparent 40%);
+            min-height: 100vh;
+        }
+
+        /* Subtle grid pattern overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(rgba(35, 53, 84, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(35, 53, 84, 0.03) 1px, transparent 1px);
+            background-size: 64px 64px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #f59e0b;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 25, 47, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--lightest-navy);
+            z-index: 100;
+        }
+
+        .nav-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: var(--lightest-slate);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--light-slate);
+            text-decoration: none;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        main {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero {
+            padding: 160px 0 80px;
+            border-bottom: 1px solid var(--lightest-navy);
+            animation: fadeUp 0.8s ease-out;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-size: 52px;
+            font-weight: 400;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            color: var(--lightest-slate);
+        }
+
+        .hero-role {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--gold);
+            margin-bottom: 28px;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-intro {
+            font-size: 18px;
+            color: var(--slate);
+            line-height: 1.75;
+            border-left: 3px solid var(--gold);
+            padding-left: 24px;
+            background: linear-gradient(90deg, var(--gold-dim), transparent 60%);
+            padding-top: 16px;
+            padding-bottom: 16px;
+            margin-left: -24px;
+            padding-left: 48px;
+        }
+
+        .hero-links {
+            margin-top: 36px;
+            display: flex;
+            gap: 32px;
+        }
+
+        .hero-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--light-slate);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .hero-links a span {
+            transition: transform 0.2s ease;
+        }
+
+        .hero-links a:hover {
+            color: var(--gold);
+        }
+
+        .hero-links a:hover span {
+            transform: translateX(3px);
+        }
+
+        section {
+            padding: 72px 0;
+            border-bottom: 1px solid var(--lightest-navy);
+            animation: fadeUp 0.6s ease-out;
+            animation-fill-mode: both;
+        }
+
+        section:nth-child(2) { animation-delay: 0.1s; }
+        section:nth-child(3) { animation-delay: 0.15s; }
+        section:nth-child(4) { animation-delay: 0.2s; }
+        section:nth-child(5) { animation-delay: 0.25s; }
+        section:nth-child(6) { animation-delay: 0.3s; }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--lightest-navy), transparent);
+        }
+
+        article h2 {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-size: 28px;
+            font-weight: 400;
+            color: var(--lightest-slate);
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        article h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--lightest-slate);
+            margin-top: 36px;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        article p {
+            color: var(--slate);
+            margin-bottom: 18px;
+            line-height: 1.75;
+        }
+
+        article ul {
+            margin-bottom: 18px;
+            padding-left: 20px;
+        }
+
+        article li {
+            color: var(--slate);
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+
+        article strong {
+            color: var(--light-slate);
+            font-weight: 600;
+        }
+
+        .callout {
+            background: var(--light-navy);
+            border-left: 3px solid var(--gold);
+            padding: 24px 28px;
+            margin: 28px 0;
+            font-size: 15px;
+            border-radius: 0 4px 4px 0;
+            position: relative;
+        }
+
+        .callout::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--gold-dim), transparent 50%);
+            border-radius: 0 4px 4px 0;
+            pointer-events: none;
+        }
+
+        .callout p {
+            margin-bottom: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .work-grid {
+            display: grid;
+            gap: 0;
+        }
+
+        .work-item {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 20px;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--lightest-navy);
+            transition: background 0.2s ease;
+        }
+
+        .work-item:hover {
+            background: linear-gradient(90deg, var(--gold-dim), transparent 40%);
+            margin: 0 -24px;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .work-item:last-child {
+            border-bottom: none;
+        }
+
+        .work-date {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--slate);
+            padding-top: 2px;
+        }
+
+        .work-content h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--lightest-slate);
+            margin-top: 0;
+            text-transform: none;
+            letter-spacing: normal;
+        }
+
+        .work-content h4 {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-size: 15px;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--light-slate);
+            margin-bottom: 10px;
+        }
+
+        .work-content p {
+            font-size: 14px;
+            color: var(--slate);
+            line-height: 1.65;
+            margin-bottom: 0;
+        }
+
+        .recognition {
+            margin-top: 48px;
+            padding: 28px 32px;
+            background: var(--light-navy);
+            border-radius: 6px;
+            border: 1px solid var(--lightest-navy);
+        }
+
+        .recognition h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .recognition-item {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--lightest-navy);
+        }
+
+        .recognition-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .recognition-item p {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        .faq-section {
+            background: var(--light-navy);
+            padding: 36px;
+            border-radius: 6px;
+            margin-top: 8px;
+            border: 1px solid var(--lightest-navy);
+        }
+
+        details {
+            background: var(--navy);
+            border: 1px solid var(--lightest-navy);
+            margin-bottom: 12px;
+            padding: 18px 22px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        details:hover {
+            border-color: var(--gold);
+        }
+
+        details[open] {
+            border-color: var(--gold);
+            background: linear-gradient(135deg, var(--navy), var(--light-navy));
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--lightest-slate);
+            list-style: none;
+            position: relative;
+            padding-right: 28px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 16px;
+            transition: transform 0.2s ease;
+        }
+
+        details[open] summary::after {
+            content: "−";
+            transform: rotate(180deg);
+        }
+
+        details p {
+            margin-top: 16px;
+            margin-bottom: 0;
+            font-size: 14px;
+            color: var(--slate);
+            line-height: 1.7;
+        }
+
+        .contact-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-content > p {
+            color: var(--slate);
+            line-height: 1.75;
+            font-size: 17px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .contact-links a {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--lightest-slate);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .contact-links a::before {
+            content: '→';
+            color: var(--gold);
+            transition: transform 0.2s ease;
+        }
+
+        .contact-links a:hover {
+            color: var(--gold);
+        }
+
+        .contact-links a:hover::before {
+            transform: translateX(4px);
+        }
+
+        footer {
+            padding: 56px 24px;
+            border-top: 1px solid var(--lightest-navy);
+            margin-top: 72px;
+            position: relative;
+            z-index: 1;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: var(--slate);
+            text-align: center;
+            letter-spacing: 0.02em;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero-intro {
+                font-size: 16px;
+                margin-left: 0;
+                padding-left: 20px;
+            }
+
+            .hero-links {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .work-item {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+
+            .work-item:hover {
+                margin: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .faq-section {
+                padding: 24px;
+            }
+
+            .recognition {
+                padding: 20px 24px;
+            }
+
+            section {
+                padding: 56px 0;
+            }
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">James Cockburn</a>
+            <ul class="nav-links">
+                <li><a href="#vibe-coding">Vibe Coding</a></li>
+                <li><a href="#local-ai">Local AI</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <header class="hero">
+            <h1>James Cockburn</h1>
+            <p class="hero-role">UK Solicitor · Builder of Legal AI Tools</p>
+            <p class="hero-intro">
+                I'm a practising litigator who builds AI tools for legal work. If you're paying 
+                for an AI "wrapper" over Claude or GPT, you should consider building it yourself—same 
+                capabilities, more control, and you actually understand what it's doing.
+            </p>
+            <div class="hero-links">
+                <a href="mailto:james.a.cockburn@gmail.com">
+                    <span>→</span> james.a.cockburn@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/james-cockburn/" target="_blank" rel="noopener">
+                    <span>→</span> LinkedIn
+                </a>
+            </div>
+        </header>
+
+        <section id="vibe-coding">
+            <h2 class="section-title">Vibe Coding</h2>
+            <article>
+                <h2>Building with AI, Not Learning to Code</h2>
+                
+                <p>The first thing you realise about these models is that they don't come with instructions. Those of us curious about what they can and can't do have to learn through trial and error. It's strangely the inverse of everyone's fear about AI replacing human thought—in the AI sphere itself, you have to take the journey into the unknown step by step.</p>
+
+                <p>That journey led me to vibe coding: AI-assisted development where you describe what you want in plain English, and the model proposes the implementation. You scope, steer, test, and iterate. I've built hundreds of tools this way—professional litigation software, home automation, games for my kids—without having learned to write a single line of code.</p>
+
+                <div class="callout">
+                    <p>Many legal AI products are essentially UI layers over the same models you already have access to. If you're paying for a wrapper, you're paying for someone else's prompts and interface. The same capabilities are available to you directly—with more control and transparency about what's actually happening.</p>
+                </div>
+
+                <h3>The Process</h3>
+                <p>Start by scoping your idea in your normal AI provider—ChatGPT, Claude, Gemini. Describe what you want in plain English and ask what would be involved. If your idea is feasible (it almost always is), move to an IDE like Cursor where you can use an AI chat interface to build software from the ground up. Your job becomes reading the conversation and steering toward your goal, not writing syntax.</p>
+
+                <p>The real skill is document ingestion and context engineering—structuring what the model sees so it can reason effectively. This matters more than clever prompting. A well-architected context window beats a clever prompt every time.</p>
+
+                <h3>The Discipline Problem</h3>
+                <p>AI can break things faster than you can fix them. Without human oversight, models rapidly optimise the wrong thing. I've watched AI make rapid, impressive progress on a project—rewriting sections, adding features, refining structure—while gradually losing sight of why it was doing any of it. The end result looks smart, even impressive, but it's fundamentally broken.</p>
+
+                <p>In litigation, this manifests as elegant submissions that subtly drop your strongest point, briefs that confidently misstate the law, or analysis so elaborate it misses the crucial fact. Bad code usually fails visibly. Bad legal output can be fluent, plausible, and wrong.</p>
+
+                <p>The models simulate discipline without enforcing it. I've tested GPT-4's behaviour in legal workflows extensively. It follows custom protocols—until it doesn't, and pretends it still is. Protocols can be taught and remembered. They can be performed. But none are verified against the model's own output. It will quote your rules, apologise for breaches, simulate audit and recovery—then bypass everything on the next failure. This is performance, not enforcement.</p>
+
+                <p>The trick is to use AI like any other power tool: carefully, iteratively, always watching what it's actually doing. Make small changes. Step back. Reassess. Don't get pulled into the rabbit hole. Complexity feels impressive, but clarity wins cases.</p>
+            </article>
+        </section>
+
+        <section id="local-ai">
+            <h2 class="section-title">Local AI</h2>
+            <article>
+                <h2>Privacy, Control, and the Limits of Context</h2>
+
+                <p>Local AI is a different category from vibe coding—more advanced, focused on balancing privacy with model sophistication. The case for running models locally isn't ideological. It's risk management.</p>
+
+                <p>If your documents leave your environment, that's a different risk profile than local processing. For legal work involving sensitive client data, "no cloud" is often the cleanest route to defensible confidentiality. A controlled retrieval pipeline is easier to supervise than a general-purpose assistant that implicitly "knows everything". Self-built tools can be designed so uncertainty is obvious and source grounding is mandatory—vendor tools often fail silently.</p>
+
+                <h3>What Becomes Possible</h3>
+                <p>I've built a fully working local RAG system with unlimited document ingestion, summarisation, chronology extraction, and a query engine powered by large local LLMs. Totally offline, detailed and fully referenced responses on consumer hardware. The architecture is fully swappable—different models for different tasks, some optimised for speed, others for reasoning depth.</p>
+
+                <p>This wouldn't have been possible even a few months ago for someone without traditional coding experience. The field moves that fast.</p>
+
+                <h3>The Architectural Challenge</h3>
+                <p>Local models are improving rapidly, but context remains limited on realistic hardware. This creates predictable failure modes: misattribution, over-confident synthesis, improvised reasoning from narrow windows. The answer isn't bigger models—it's architecture.</p>
+
+                <p>My systems operate at two levels: a case graph layer with stable, verified representations (party positions, issues, chronologies), and a raw chunk layer with the underlying sources. The goal is to prevent the model from inventing global understanding when it only has local visibility. Structured retrieval with mandatory source grounding, not open-ended generation.</p>
+
+                <p>The ideal system isn't one that "never hallucinates"—that's unrealistic. The ideal system prevents pure invention, makes uncertainty obvious, and allows rapid verification. In legal work, supervision is the point. The human remains essential.</p>
+            </article>
+        </section>
+
+        <section id="work">
+            <h2 class="section-title">Legal Practice</h2>
+            <div class="work-grid">
+                <div class="work-item">
+                    <span class="work-date">2024–Present</span>
+                    <div class="work-content">
+                        <h3>Domain Expert</h3>
+                        <h4>Harvey AI</h4>
+                        <p>Legal research sourcing, product risk controls, output reliability.</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <span class="work-date">2020–Present</span>
+                    <div class="work-content">
+                        <h3>Senior Associate</h3>
+                        <h4>Harcus Parker</h4>
+                        <p>Lead solicitor on civil fraud, competition litigation, and group actions. Successfully defended CICC's funding structure through CAT, Court of Appeal, and Supreme Court—ending a two-year challenge to litigation funding in collective proceedings.</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <span class="work-date">2018–2020</span>
+                    <div class="work-content">
+                        <h3>Associate</h3>
+                        <h4>King & Spalding</h4>
+                        <p>Internal investigations for UHNW individuals and multinationals.</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <span class="work-date">2014–2017</span>
+                    <div class="work-content">
+                        <h3>Associate</h3>
+                        <h4>Curtis, Mallet-Prevost</h4>
+                        <p>Lead English solicitor on £100m+ international arbitration and investor-state disputes.</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <span class="work-date">2008–2014</span>
+                    <div class="work-content">
+                        <h3>Earlier Career</h3>
+                        <h4>Joseph Hage Aaronson · Quinn Emanuel · Gibson Dunn · Trowers & Hamlins</h4>
+                        <p>Contentious insolvency, commercial disputes, investigations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recognition">
+                <h3 class="section-title">Recognition</h3>
+                <div class="recognition-item">
+                    <p><strong>"Exceptionally bright – a really good lawyer"</strong> — Legal 500, 2025</p>
+                </div>
+                <div class="recognition-item">
+                    <p><strong>Lawyer in the News</strong> — <a href="https://www.lawgazette.co.uk/lawyer-in-the-news/lawyer-in-the-news-james-cockburn-harcus-parker/5123905.article" target="_blank" rel="noopener">Law Society Gazette, July 2025</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-section">
+                <details>
+                    <summary>Do I need to learn to code to build AI tools?</summary>
+                    <p>No. AI-assisted development lets you describe what you want in plain English and steer the model toward implementation. The skill is in scoping, testing, and iterating—not writing syntax. That said, you need to understand what's happening well enough to catch when it goes wrong.</p>
+                </details>
+                <details>
+                    <summary>What's the difference between vibe coding and using local models?</summary>
+                    <p>Vibe coding is a method—AI-assisted development using any model, cloud or local. Local AI is about where processing happens: on your own hardware, with no data leaving your environment. You can vibe code with cloud APIs, or you can vibe code locally. They're complementary, not competing.</p>
+                </details>
+                <details>
+                    <summary>Why would I build instead of buying a legal AI tool?</summary>
+                    <p>Many commercial tools are UI layers over the same models you already have access to. Building yourself gives you control over the architecture, transparency about what's actually happening, and the ability to design for your specific workflows. It also forces you to understand the failure modes.</p>
+                </details>
+                <details>
+                    <summary>How do you prevent hallucinations in legal AI?</summary>
+                    <p>Architecture, not prompting. Structured retrieval with mandatory source grounding. Two-tier systems that separate verified representations from raw source material. Designing for uncertainty to be visible rather than hidden. And relentless human oversight—the model will never reliably verify its own output.</p>
+                </details>
+                <details>
+                    <summary>Is local AI sophisticated enough for real legal work?</summary>
+                    <p>Increasingly, yes. Context limits remain a constraint on consumer hardware, but architectural solutions—chunked retrieval, multi-model pipelines, structured summaries—can compensate. The tradeoff is privacy and control versus raw capability. For many use cases, that tradeoff favours local.</p>
+                </details>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <p>
+                    Whether it's a complex dispute, an AI project, or questions about building your own tools—I'm happy to talk.
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:james.a.cockburn@gmail.com">james.a.cockburn@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/james-cockburn/" target="_blank" rel="noopener">linkedin.com/in/james-cockburn</a>
+                    <a href="tel:+447966523191">+44 7966 523 191</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 James Cockburn · London</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for subtle scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
