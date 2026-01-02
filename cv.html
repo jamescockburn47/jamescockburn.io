@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="James Cockburn CV - Senior Solicitor-Advocate specialising in complex international disputes and legal AI development.">
+    <link rel="canonical" href="https://jamescockburn.io/cv" />
+    <title>CV | James Cockburn</title>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="CV | James Cockburn">
+    <meta property="og:description" content="Senior Solicitor-Advocate | Complex International Disputes | AI Developer">
+    <meta property="og:url" content="https://jamescockburn.io/cv">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #0a192f;
+            --light-navy: #112240;
+            --lightest-navy: #233554;
+            --slate: #8892b0;
+            --light-slate: #a8b2d1;
+            --lightest-slate: #ccd6f6;
+            --white: #e6f1ff;
+            --gold: #d97706;
+            --gold-dim: rgba(217, 119, 6, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--navy);
+            color: var(--slate);
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            background-image: 
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(217, 119, 6, 0.08), transparent),
+                radial-gradient(circle at 20% 80%, rgba(17, 34, 64, 0.8), transparent 40%);
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(rgba(35, 53, 84, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(35, 53, 84, 0.03) 1px, transparent 1px);
+            background-size: 64px 64px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #f59e0b;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 25, 47, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--lightest-navy);
+            z-index: 100;
+        }
+
+        .nav-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: var(--lightest-slate);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--light-slate);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero {
+            padding: 140px 0 60px;
+            border-bottom: 1px solid var(--lightest-navy);
+            animation: fadeUp 0.8s ease-out;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-size: 42px;
+            font-weight: 400;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 12px;
+            color: var(--lightest-slate);
+        }
+
+        .hero-subtitle {
+            font-size: 17px;
+            color: var(--gold);
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        .hero-intro {
+            font-size: 17px;
+            color: var(--slate);
+            line-height: 1.75;
+            max-width: 680px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--light-slate);
+            margin-bottom: 24px;
+        }
+
+        .back-link:hover {
+            color: var(--gold);
+        }
+
+        section {
+            padding: 56px 0;
+            border-bottom: 1px solid var(--lightest-navy);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--lightest-navy), transparent);
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+        }
+
+        .expertise-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 16px;
+            background: var(--light-navy);
+            border-radius: 4px;
+            font-size: 14px;
+            color: var(--light-slate);
+            border: 1px solid var(--lightest-navy);
+        }
+
+        .expertise-item::before {
+            content: '→';
+            color: var(--gold);
+            flex-shrink: 0;
+        }
+
+        details {
+            background: var(--light-navy);
+            border: 1px solid var(--lightest-navy);
+            margin-bottom: 12px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            overflow: hidden;
+        }
+
+        details:hover {
+            border-color: var(--gold);
+        }
+
+        details[open] {
+            border-color: var(--gold);
+        }
+
+        summary {
+            cursor: pointer;
+            padding: 20px 24px;
+            list-style: none;
+            position: relative;
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 18px;
+            transition: transform 0.2s ease;
+        }
+
+        details[open] summary::after {
+            content: "−";
+        }
+
+        .role-date {
+            font-size: 13px;
+            color: var(--slate);
+            padding-top: 3px;
+        }
+
+        .role-header h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--lightest-slate);
+            margin-bottom: 4px;
+        }
+
+        .role-header h4 {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-size: 15px;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--light-slate);
+        }
+
+        .role-content {
+            padding: 0 24px 24px 164px;
+        }
+
+        .role-content p {
+            font-size: 14px;
+            color: var(--slate);
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .role-content ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+
+        .role-content li {
+            font-size: 14px;
+            color: var(--slate);
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .callout {
+            background: var(--navy);
+            border-left: 3px solid var(--gold);
+            padding: 20px 24px;
+            margin: 20px 0;
+            font-size: 14px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .callout p {
+            margin: 0;
+            color: var(--light-slate);
+        }
+
+        .education-item {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--lightest-navy);
+        }
+
+        .education-item:last-child {
+            border-bottom: none;
+        }
+
+        .education-item h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--lightest-slate);
+            margin-bottom: 4px;
+        }
+
+        .education-item p {
+            font-size: 14px;
+            color: var(--slate);
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .interest-item {
+            padding: 16px 20px;
+            background: var(--light-navy);
+            border-radius: 6px;
+            border: 1px solid var(--lightest-navy);
+        }
+
+        .interest-item h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--lightest-slate);
+            margin-bottom: 6px;
+        }
+
+        .interest-item p {
+            font-size: 13px;
+            color: var(--slate);
+            line-height: 1.5;
+        }
+
+        .recognition-box {
+            background: var(--light-navy);
+            padding: 24px 28px;
+            border-radius: 6px;
+            border: 1px solid var(--lightest-navy);
+            margin-top: 24px;
+        }
+
+        .recognition-box h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .recognition-item {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--lightest-navy);
+        }
+
+        .recognition-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .recognition-item p {
+            font-size: 14px;
+            color: var(--slate);
+        }
+
+        .recognition-item strong {
+            color: var(--lightest-slate);
+        }
+
+        footer {
+            padding: 48px 24px;
+            border-top: 1px solid var(--lightest-navy);
+            margin-top: 48px;
+            position: relative;
+            z-index: 1;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: var(--slate);
+            text-align: center;
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 120px 0 48px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            summary {
+                grid-template-columns: 1fr;
+                gap: 6px;
+                padding-right: 48px;
+            }
+
+            .role-content {
+                padding-left: 24px;
+            }
+
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">James Cockburn</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <header class="hero">
+            <a href="/" class="back-link">← Back to main site</a>
+            <h1>Curriculum Vitae</h1>
+            <p class="hero-subtitle">Senior Solicitor-Advocate · Complex International Disputes · AI Developer</p>
+            <p class="hero-intro">
+                15+ years' experience in commercial litigation, cross-border fraud, group actions, and international arbitration. Building, testing, and deploying advanced AI tools for legal practice—including retrieval-augmented generation systems, local legaltech infrastructure, and prompt-engineering protocols now used by commercial AI providers.
+            </p>
+        </header>
+
+        <section id="expertise">
+            <h2 class="section-title">Core Legal Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-item">High-value commercial and civil fraud litigation (UK & international)</div>
+                <div class="expertise-item">Advocacy before High Court (Higher Rights)</div>
+                <div class="expertise-item">Commercial Court, Court of Appeal, Supreme Court experience</div>
+                <div class="expertise-item">Asset tracing, enforcement, insolvency</div>
+                <div class="expertise-item">Competition collective actions</div>
+                <div class="expertise-item">Litigation funding/ATE structuring and enforcement</div>
+                <div class="expertise-item">International arbitration: UNCITRAL, ICSID, LCIA, ICC</div>
+                <div class="expertise-item">Regulatory, criminal, and internal investigations</div>
+            </div>
+        </section>
+
+        <section id="ai-expertise">
+            <h2 class="section-title">AI Product Development & Leadership</h2>
+            <div class="expertise-grid">
+                <div class="expertise-item">Building in-house RAG/AI tools for case management and knowledge retrieval</div>
+                <div class="expertise-item">Hands-on development in Python, HTML5, Streamlit, vector search (FAISS, ChromaDB)</div>
+                <div class="expertise-item">Deep experience across ChatGPT, Claude, Gemini and open-source models</div>
+                <div class="expertise-item">Designed hallucination suppression protocols now used in commercial AI law products</div>
+                <div class="expertise-item">International consulting for legaltech startups, scale-ups, and established providers</div>
+                <div class="expertise-item">Automations integrating case data, Companies House, BAILII, National Archives</div>
+            </div>
+
+            <div class="callout">
+                <p>Designed system prompt guardrails for output consistency and hallucination suppression—protocols now deployed in commercial AI law products. Deep understanding of data privacy, regulatory requirements, and GDPR compliance for legal AI.</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 class="section-title">Professional Experience</h2>
+
+            <details>
+                <summary>
+                    <span class="role-date">Ongoing</span>
+                    <div class="role-header">
+                        <h3>LegalTech Advisory</h3>
+                        <h4>International Consulting</h4>
+                    </div>
+                </summary>
+                <div class="role-content">
+                    <p>Advising prospective founders, startups, scale-ups, and established legaltech providers internationally on AI product development, risk architecture, and practical implementation.</p>
+                    <ul>
+                        <li>Establishing reliable sourcing for legal research and analysis</li>
+                        <li>Contributing to product risk controls and AI output reliability</li>
+                        <li>Retrieval system design and protocol development</li>
+                        <li>Focus on local AI solutions for privacy and control</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    <span class="role-date">2023–Present</span>
+                    <div class="role-header">
+                        <h3>Self-Built AI Systems</h3>
+                        <h4>Independent Development</h4>
+                    </div>
+                </summary>
+                <div class="role-content">
+                    <p>Developing full-stack local RAG platform for litigation document search, deployed in live High Court and CAT cases.</p>
+                    <ul>
+                        <li>Custom hallucination/verification protocols adopted by commercial AI partners</li>
+                        <li>Python/Streamlit/FAISS/Chroma automations integrating case data with public APIs</li>
+                        <li>Deep understanding of data privacy, regulatory requirements, GDPR</li>
+                        <li>Workshops and training for lawyers on AI deployment and workflow automation</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    <span class="role-date">2020–Present</span>
+                    <div class="role-header">
+                        <h3>Senior Associate</h3>
+                        <h4>Harcus Parker</h4>
+                    </div>
+                </summary>
+                <div class="role-content">
+                    <p>Lead solicitor on high-profile group and commercial claims including civil fraud, competition litigation, asset tracing, and enforcement.</p>
+                    <ul>
+                        <li>Successfully defended CICC's funding structure through CAT, Court of Appeal, and Supreme Court—ending a two-year challenge to litigation funding in collective proceedings</li>
+                        <li>Managing complex multi-party litigation with significant document volumes</li>
+                        <li>Litigation funding and ATE structuring expertise</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    <span class="role-date">2018–2020</span>
+                    <div class="role-header">
+                        <h3>Associate</h3>
+                        <h4>King & Spalding</h4>
+                    </div>
+                </summary>
+                <div class="role-content">
+                    <p>Sensitive internal investigations for UHNW individuals and multinational companies, litigation and arbitration.</p>
+                    <ul>
+                        <li>Cross-border regulatory investigations</li>
+                        <li>Compliance advisory for major corporates</li>
+                        <li>High-stakes disputes with reputational sensitivity</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    <span class="role-date">2014–2017</span>
+                    <div class="role-header">
+                        <h3>Associate</h3>
+                        <h4>Curtis, Mallet-Prevost</h4>
+                    </div>
+                </summary>
+                <div class="role-content">
+                    <p>Lead English solicitor on £100m+ international arbitration and investor-state disputes, High Court and DIFC litigation.</p>
+                    <ul>
+                        <li>Managed cross-border teams on energy, construction, and enforcement matters</li>
+                        <li>ICSID and UNCITRAL arbitration proceedings</li>
+                        <li>Complex enforcement across multiple jurisdictions</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    <span class="role-date">2008–2014</span>
+                    <div class="role-header">
+                        <h3>Earlier Career</h3>
+                        <h4>Joseph Hage Aaronson · Quinn Emanuel · Gibson Dunn · Trowers & Hamlins</h4>
+                    </div>
+                </summary>
+                <div class="role-content">
+                    <p>Built foundation in contentious insolvency, commercial disputes, investigations, and international arbitration.</p>
+                    <ul>
+                        <li><strong>Joseph Hage Aaronson</strong> (2012–2014): Contentious insolvency, trusts, international arbitration</li>
+                        <li><strong>Quinn Emanuel</strong> (2011–2012): Major commercial litigation</li>
+                        <li><strong>Gibson Dunn</strong> (2010–2011): International disputes and investigations</li>
+                        <li><strong>Trowers & Hamlins</strong> (2008–2010): Training contract</li>
+                    </ul>
+                </div>
+            </details>
+
+            <div class="recognition-box">
+                <h3>Recognition</h3>
+                <div class="recognition-item">
+                    <p><strong>"Exceptionally bright – a really good lawyer"</strong> — Legal 500, 2025</p>
+                </div>
+                <div class="recognition-item">
+                    <p><strong>Lawyer in the News</strong> — <a href="https://www.lawgazette.co.uk/lawyer-in-the-news/lawyer-in-the-news-james-cockburn-harcus-parker/5123905.article" target="_blank" rel="noopener">Law Society Gazette, July 2025</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <h3>BPP Law School, London</h3>
+                <p>GDL & LPC (part-time), 2005–2008</p>
+            </div>
+            <div class="education-item">
+                <h3>University of Edinburgh</h3>
+                <p>MA (Hons) History of Art & Italian, 2001–2005</p>
+            </div>
+            <div class="education-item">
+                <h3>Westminster School, London</h3>
+                <p>A-Levels & GCSEs</p>
+            </div>
+        </section>
+
+        <section id="other">
+            <h2 class="section-title">Other Interests</h2>
+            <div class="interests-grid">
+                <div class="interest-item">
+                    <h4>Languages</h4>
+                    <p>Italian (Erasmus Scholar, University of Udine); French</p>
+                </div>
+                <div class="interest-item">
+                    <h4>Professional Community</h4>
+                    <p>Former Chair/mentor, Old Westminster Lawyers Society</p>
+                </div>
+                <div class="interest-item">
+                    <h4>Sport</h4>
+                    <p>Former national/international rower; keen cyclist & triathlete</p>
+                </div>
+                <div class="interest-item">
+                    <h4>Personal Projects</h4>
+                    <p>Educational AI tools for children; 3D printing; brewing</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 James Cockburn · London · <a href="mailto:james.a.cockburn@gmail.com">james.a.cockburn@gmail.com</a></p>
+    </footer>
+</body>
+</html>
+
