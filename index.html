@@ -648,8 +648,8 @@
             <ul class="nav-links">
                 <li><a href="#vibe-coding">Vibe Coding</a></li>
                 <li><a href="#local-ai">Local AI</a></li>
+                <li><a href="#protocols">Protocols</a></li>
                 <li><a href="#work">Work</a></li>
-                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -697,7 +697,7 @@
 
                 <p>In litigation, this manifests as elegant submissions that subtly drop your strongest point, briefs that confidently misstate the law, or analysis so elaborate it misses the crucial fact. Bad code usually fails visibly. Bad legal output can be fluent, plausible, and wrong.</p>
 
-                <p>The models simulate discipline without enforcing it. I've tested GPT-4's behaviour in legal workflows extensively. It follows custom protocols—until it doesn't, and pretends it still is. Protocols can be taught and remembered. They can be performed. But none are verified against the model's own output. It will quote your rules, apologise for breaches, simulate audit and recovery—then bypass everything on the next failure. This is performance, not enforcement.</p>
+                <p>The models simulate discipline without enforcing it. I've tested frontier model behaviour in legal workflows extensively—GPT-4, Claude, Gemini, and now their successors. They follow custom protocols until they don't, then pretend they still are. Protocols can be taught and remembered. They can be performed. But none are verified against the model's own output. The model will quote your rules, apologise for breaches, simulate audit and recovery—then bypass everything on the next failure. This is performance, not enforcement.</p>
 
                 <p>The trick is to use AI like any other power tool: carefully, iteratively, always watching what it's actually doing. Make small changes. Step back. Reassess. Don't get pulled into the rabbit hole. Complexity feels impressive, but clarity wins cases.</p>
             </article>
@@ -723,6 +723,30 @@
                 <p>My systems operate at two levels: a case graph layer with stable, verified representations (party positions, issues, chronologies), and a raw chunk layer with the underlying sources. The goal is to prevent the model from inventing global understanding when it only has local visibility. Structured retrieval with mandatory source grounding, not open-ended generation.</p>
 
                 <p>The ideal system isn't one that "never hallucinates"—that's unrealistic. The ideal system prevents pure invention, makes uncertainty obvious, and allows rapid verification. In legal work, supervision is the point. The human remains essential.</p>
+            </article>
+        </section>
+
+        <section id="protocols">
+            <h2 class="section-title">Custom Protocols</h2>
+            <article>
+                <h2>A Year of Building AI Governance from Scratch</h2>
+
+                <p>Standard prompting doesn't work for legal AI. You can tell a model to cite sources, verify authorities, and flag uncertainty—but it will simulate compliance rather than enforce it. After a year of daily testing across frontier models, I designed a complete protocol architecture from first principles: a three-layer system that forces structured behaviour where the model's default is performance.</p>
+
+                <div class="callout">
+                    <p>These protocols are entirely self-designed and self-tested. No vendor templates, no borrowed frameworks. Every rule exists because I watched a model fail without it.</p>
+                </div>
+
+                <h3>The Architecture</h3>
+                <p>The system operates across three layers. <strong>Layer 1 (Governance Core)</strong> handles fundamental integrity: protocol conflicts, memory limits, hallucination containment, citation verification, and session state. <strong>Layer 2 (Global Operating Rules)</strong> governs daily operation: source hierarchy, authority acquisition, case handling, output structure, and mandatory verification triggers. <strong>Layer 3 (Domain Modules)</strong> contains jurisdiction-specific rules—currently UK civil procedure—with renumbering audits and conditional order handling.</p>
+
+                <h3>Key Mechanisms</h3>
+                <p><strong>Hallucination containment</strong> freezes propagation of suspect claims. The model must replace with verified sources or mark content explicitly as unverified. If a prior step was influenced, it issues a correction note. <strong>Citation verification</strong> treats all new authorities as draft until verified against primary sources—statute sites, BAILII, official reports. Secondary sources are permanently marked.</p>
+
+                <p><strong>Source hierarchy</strong> enforces primary over secondary: no quotes or doctrinal use without verified authority. The <strong>Interrogation Escalation Protocol</strong> triggers when I challenge any fact, law, or inference—the model must restate the proposition, show its evidence chain, verify against primary sources, and correct or mark as disputed.</p>
+
+                <h3>Why This Matters</h3>
+                <p>Off-the-shelf legal AI has no equivalent. Vendor tools promise accuracy but fail silently. My protocols make failure visible, force verification at defined points, and prevent the model from generating confident nonsense. The human remains in control—not because the model chooses to defer, but because the architecture requires it.</p>
             </article>
         </section>
 
